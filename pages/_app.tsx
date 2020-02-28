@@ -1,6 +1,7 @@
 import App,{ AppContext } from 'next/app';
 import { isServer } from '../lib/env'; 
 import React, { ReactNode } from 'react';
+import { JstarThemeProvider } from '../theme';
 
 interface InitialProps {
   isServer: boolean;
@@ -33,7 +34,9 @@ class MyMobxApp extends App<InitialProps>{
     return(
       <>
         Hello MyMobxApp 
-        <Component {...pageProps}/>  
+        <JstarThemeProvider>
+          <Component {...pageProps}/>  
+        </JstarThemeProvider>
       </>
     )
   }  
