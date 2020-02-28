@@ -12,18 +12,41 @@ const {
 type Props = {
     isSignedIn : boolean | undefined; 
     userImage: string | null;
-    
+    isMyMenuVisible: boolean | undefined; 
 }
 
 export const GnbHorizontalMenu: FC<Props> = ({
     isSignedIn,
-    userImage
+    userImage,
+    isMyMenuVisible
 }) => {
     return (
         <>
             <StyledMenuList>
-                
+                <StyledMenuItem>
+                    Search 
+                </StyledMenuItem>
+                <StyledMenuItem>
+                    About
+                </StyledMenuItem>
+                {
+                isSignedIn 
+                ?
+                    <StyledMenuItem>My Menu</StyledMenuItem>
+                :
+                    <StyledMenuItem>SignIn</StyledMenuItem>   
+                }        
             </StyledMenuList>
+            { 
+                isMyMenuVisible  &&  
+                <StyledDropdownUnderlay>
+                    <StyledMenuDropdown>
+                        <StyledMenuDropdownItem>
+                            My Menu
+                        </StyledMenuDropdownItem>
+                    </StyledMenuDropdown>
+                </StyledDropdownUnderlay>
+            }
         </>
     )
 }

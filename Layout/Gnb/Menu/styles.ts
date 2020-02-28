@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const StyledMenuList = styled.div`
+const StyledMenuList = styled.ul`
 `;
 
 const StyledMenuItem = styled.li`
