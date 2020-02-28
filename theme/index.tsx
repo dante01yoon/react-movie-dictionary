@@ -19,3 +19,4 @@ export const JstarThemeProvider: FC<{ children: any }> = ({children}) => (
         </>
     </ThemeProvider>
 )
+
