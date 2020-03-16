@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+		"baseUrl": ".",
+		"rootDir": ".",
     "target": "es6",
     "lib": [
       "dom",

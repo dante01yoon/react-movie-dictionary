@@ -71,3 +71,8 @@ export type KeyList = {
 export type Multiresult = {
 	results: TVResult | MovieResult | PeopleResult
 } & CommonType
+
+
+export type Collection = { 
+	
+}
