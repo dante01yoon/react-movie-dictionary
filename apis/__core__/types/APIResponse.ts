@@ -22,3 +22,4 @@ export type APIResponse<Data extends object> =
 			data?: Data;
 			error: { message: string };
 		};
+		
