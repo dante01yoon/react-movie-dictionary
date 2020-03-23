@@ -1,11 +1,14 @@
 import React, { FC, useState } from 'react';
 import { observer } from 'mobx-react-lite';
+import { useForm } from 'react-hook-form';
 
-const GnbLogin: FC<{}>  = () => {
-	const onSubmit = () => {
-		
-	};
+type FormData = {
+	id: string;
+	password: string; 
+}; 
+
+const GnbLogin: FC = observer(() => {
 	return (
-		
+		const 
 	)
-}
+});
