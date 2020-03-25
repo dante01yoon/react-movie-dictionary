@@ -1,6 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import { APIResponse } from './__core__/types/APIResponse';
-import { TimeUnit } from 'constants/TimeUnits';
 import { MMT_TOKEN, MMT_TOKEN_EXPIRED_TIME } from 'constants/LocalStorageKey';
 const base = "https://api.themoviedb.org/3";
 
