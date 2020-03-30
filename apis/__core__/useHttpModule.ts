@@ -6,7 +6,7 @@ const tmdbAxios: AxiosInstance = axios.create({
 	baseURL
 });
 
-export const initHeader  = (token: string)  => {
+export const initHeader  = (token: string | undefined)  => {
 	tmdbAxios.defaults.headers.common['Authorization'] = token ?? '';
 };
 

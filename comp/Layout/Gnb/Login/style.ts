@@ -5,5 +5,10 @@ type ButtonProps = {
 }
 
 const StyledButton = styled.button<ButtonProps>`
-	${p =>  p.isSigning ?  }
+	${p => p.isSigning 
+		? 
+			`background-color : ${p.theme.colors.primary}`
+		:
+			`background-color: ${p.theme.colors.primary}`
+	}
 `
