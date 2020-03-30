@@ -1,11 +1,12 @@
 import { ActionStatus} from 'lib/actionStatus';
 import { action, observable } from 'mobx';
 import { RootStore } from './index';
+import { APIError } from 'apis/__core__/types'; 
 import { registerInterceptor } from 'mobx/lib/internal';
 
 class ApiStore {
 	@observable status: ActionStatus = ActionStatus.Initial;
-	@observable error?: string;
+	@observable error?: APIError;
 	rootStore?: RootStore;
 	
 	@action.bound
@@ -21,7 +22,7 @@ class ApiStore {
 	}
 
 	@action.bound
-	onFailure(error?: string): void {
+	onFailure(error?: APIError): void {
 		this.status = ActionStatus.Failure;
 
 		if(error) {
