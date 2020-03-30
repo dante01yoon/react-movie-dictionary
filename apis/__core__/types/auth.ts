@@ -1,7 +1,7 @@
 import { APIError } from './index';
 import axios from 'axios';
 
-export type Token = string; 
+export type Token = string | undefined ; 
 export type AuthResponse = APIError & {
 	access_token?: Token
 };

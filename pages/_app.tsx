@@ -1,7 +1,8 @@
-import App,{ AppContext } from 'next/app';
+import App,{ AppContext, Container } from 'next/app';
 import { isServer } from '../lib/env'; 
 import React, { ReactNode } from 'react';
-import { ReactThemeProvider } from 'theme'; 
+import { ReactThemeProvider } from '../theme'; 
+
 interface InitialProps {
   isServer: boolean;
 }
@@ -31,10 +32,12 @@ class MyMobxApp extends App<InitialProps>{
   render(): JSX.Element {
     const { Component, pageProps, isServer, ...rest} = this.props;
     return(
-      <ReactThemeProvider>
-        Hello reactMovie  
-        <Component {...pageProps}/>  
-      </ReactThemeProvider>
+			<Container>
+				<ReactThemeProvider>
+					Hello reactMovie  
+					<Component {...pageProps} {...rest}/>  
+				</ReactThemeProvider>
+			</Container>
     )
   }  
 }

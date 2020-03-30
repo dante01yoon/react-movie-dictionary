@@ -12,6 +12,8 @@ const GnbLogin: FC = observer(() => {
 			const { status, signIn, error } = useStore('auth'); 
 	}
 	return (
-		
+		<>
+			Login 
+		</>
 	)
 });

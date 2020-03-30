@@ -21,7 +21,7 @@ export const requestToken = ( params: requestTokenBody = {redirect_to: 'http://n
 	return http.GET<AuthResponse>(GET_REQUEST_TOKEN_V4, params); 
 }
 export const accessToken = (params: Token ): Promise<APIResponse<AuthResponse>> => 
-	http.POST<AuthResponse>(GET_ACCESS_TOKEN_V4, params); 
+	http.POST<AuthResponse>(GET_ACCESS_TOKEN_V4, { params }); 
 export const deleteToken = (params: Token ): Promise<APIResponse<AuthResponse>> => 
 	http.DELETE<AuthResponse>(GET_ACCESS_TOKEN_V4, {params}); 
 export const postAuth = {

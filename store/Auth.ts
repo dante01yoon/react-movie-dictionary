@@ -1,7 +1,7 @@
 import ApiStore from './api.store' 
 import { RootStore } from 'store'; 
 import { observable, action } from 'mobx';
-import { useLocalStore } from 'mobx-react';
+import { useLocalStore } from 'mobx-react-lite';
 import { postAuth } from 'apis/auth'; 
 import { AuthResponse, Token, http } from 'apis/__core__';
 import { initHeader } from 'apis/__core__'; 
@@ -45,8 +45,8 @@ class AuthStore extends ApiStore {
 		if(this.status !== ActionStatus.Request) {
 			this.onRequest();
 			try {
-				const [data] = await postAuth.requestToken();
-				useRouter().push(`https://www.themoviedb.org/auth/access?request_token=${request_token}`);
+				const [, data] = await postAuth.requestToken();
+				useRouter().push(`https://www.themoviedb.org/auth/access?request_token=${data?.access_token}`);
 			} catch ( error ) {
 				this.onFailure(error); 
 				return;
@@ -59,7 +59,7 @@ class AuthStore extends ApiStore {
 		try {
 			this.onRequest(); 
 			
-			const [error, data] = await postAuth.deleteToken(access_token);
+			const [, data] = await postAuth.deleteToken(access_token);
 			if(data){
 				http.resetToken();
 				this.auth = null; 
