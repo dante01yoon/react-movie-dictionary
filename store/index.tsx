@@ -1,9 +1,11 @@
 import React, { createContext, FC, useContext } from 'react';
 import { useLocalStore } from 'mobx-react-lite';
 import AuthStore from './Auth';
+import ApiStore from './api.store' 
 
 export type RootStore = {
-	auth: AuthStore
+	auth: AuthStore,
+	pucList: PicListStore
 }
 
 export type StoreKeys = keyof RootStore; 
