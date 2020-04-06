@@ -3,7 +3,7 @@ import { RootStore }  from './index';
 import ApiStore from './api.store'; 
 import { action } from 'mobx';
 import { APIResponse } from 'apis/__core__';
-
+import { PicList } from from 'store'
 type picListResponse = APIResponse<PicList>
 
 export class PictureList extends ApiStore{
@@ -13,6 +13,8 @@ export class PictureList extends ApiStore{
 
 	@action
 	async fetchImages() {
-		
+		await 
 	}
+
+	@
 }
