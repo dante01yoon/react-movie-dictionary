@@ -2,10 +2,11 @@ import React, { createContext, FC, useContext } from 'react';
 import { useLocalStore } from 'mobx-react-lite';
 import AuthStore from './Auth';
 import PictureListStore from './picList';
-
+import GnbStore from './Gnb'; 
 export type RootStore = {
 	auth: AuthStore,
-	picList: PictureListStore
+	picList: PictureListStore,
+	gnb: GnbStore,
 }
 
 export type StoreKeys = keyof RootStore; 
@@ -16,6 +17,7 @@ const initRootStore = (): RootStore => {
 	const rootStore: RootStore = {} as RootStore;
 	rootStore.auth = new AuthStore(rootStore);
 	rootStore.picList = new PictureListStore(rootStore); 
+	rootStore.gnb = new GnbStore(rootStore);
 	return rootStore;
 }
 

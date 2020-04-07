@@ -13,6 +13,6 @@ module.exports = {
 	webpack(config ,{ isServer, buildId} ) {
 		config.resolve.modules.push(__dirname)
 
-		return config; 
+		return config;  
 	}
 }

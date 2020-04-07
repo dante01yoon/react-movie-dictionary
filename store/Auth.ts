@@ -1,10 +1,8 @@
 import ApiStore from './api.store' 
 import { RootStore } from 'store'; 
 import { observable, action } from 'mobx';
-import { useLocalStore } from 'mobx-react-lite';
 import { postAuth } from 'apis/auth'; 
-import { AuthResponse, Token, http } from 'apis/__core__';
-import { initHeader } from 'apis/__core__'; 
+import { Token, http } from 'apis/__core__';
 import { ActionStatus } from 'lib/actionStatus';
 import { useRouter } from 'next/router';
 

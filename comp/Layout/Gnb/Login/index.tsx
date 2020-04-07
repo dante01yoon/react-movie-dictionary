@@ -1,19 +1,33 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
-import { useForm } from 'react-hook-form';
-import { useStore } from 'store'; 
-type FormData = {
-	id: string;
-	password: string; 
-}; 
-
-const GnbLogin: FC = observer(() => {
-	const onSignIn = () => {
-			const { status, signIn, error } = useStore('auth'); 
-	}
-	return (
-		<>
-			Login 
-		</>
+import { StyledButton } from './style'; 
+const GnbLogin: FC<{
+	isSignedIn: boolean, 
+	isSignedOut: boolean
+	isSigningIn: boolean,
+	isSigningOut: boolean
+}> = observer(({
+	isSigningIn = false,
+	isSigningOut = false,
+	isSignedIn = false, 
+	isSignedOut = false 
+}) => {
+	useEffect(() => {
+		
+	},[]);
+	return(
+		isSigningIn ||  isSigningOut 
+			? 
+				<StyledButton isLoading= {true}>
+					loading...				
+				</StyledButton>
+			:
+				<StyledButton isLoading= {false} >
+					{
+						isSignedIn ? 'signOut' : isSignedOut ? 'signIn / signUp' : 'check the status'
+					}
+				</StyledButton>			
 	)
 });
+
+export default GnbLogin; 

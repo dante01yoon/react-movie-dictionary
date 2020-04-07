@@ -7,7 +7,7 @@ const LoginView = observer(() => {
 	return(
 	<>
 		{
-			pictureList 
+			pictureList.length > 0  
 				? 
 				pictureList.map((picture, index) => {
 					return <div key={index}>{picture.author}</div>
