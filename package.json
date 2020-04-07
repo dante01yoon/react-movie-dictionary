@@ -9,6 +9,7 @@
     "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.8.3",
     "@next/bundle-analyzer": "^9.2.2",
     "@types/axios": "^0.14.0",
     "@types/styled-components": "^5.0.1",

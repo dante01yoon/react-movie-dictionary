@@ -20,9 +20,6 @@
     "isolatedModules": true,
 		"jsx": "preserve",
 		"experimentalDecorators": true,
-		"paths": {
-			"@design/*": ["theme/*"]
-		}
   },
   "exclude": [
     "node_modules"

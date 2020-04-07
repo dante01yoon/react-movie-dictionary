@@ -1,8 +1,12 @@
 //interface
-export * from 'theme/interface/color';
-export * from 'theme/interface/device';
-export * from 'theme/interface/theme';
-export * from 'theme/interface/viewport';
+export * from './interface/color';
+export * from './interface/device';
+export * from './interface/theme';
+export * from './interface/viewport';
+
+//theme 
+export * from './colors';
+export * from './viewport'; 
 
 //theme Provider 
-export * from 'theme/provider'; 
+export * from './provider';

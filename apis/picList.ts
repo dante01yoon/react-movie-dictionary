@@ -1,13 +1,18 @@
 import { http } from './__core__/useHttpModule'; 
 import { 
-	APIResponse
+	APIResponse,
+	ListResponse
 } from './__core__/types';
 
-export type RequestList = {
-	
-}
-
 const BASE = 'https://picsum.photos';
-const GET_REQUEST_LIST = '/v2/list';
+const GET_REQUEST_LIST = '/v2/list?';
 
-export const requestList = ( params:
+export type RequestListParams = {
+	page: number; 
+	limit: number; 
+}
+export const requestList = ( params: RequestListParams): Promise<APIResponse<ListResponse>>  => {
+	const { page, limit } = params;
+
+	return http.GET<ListResponse>(`${BASE}${GET_REQUEST_LIST}page=${page}&limit=${limit}`);
+}  

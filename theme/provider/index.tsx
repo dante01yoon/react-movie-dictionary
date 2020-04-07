@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { ThemeProvider } from 'styled-components'; 
 import { Theme } from 'theme/interface/theme';
-import { colors } from 'theme/colors';
+import { colors } from '../colors';
 
 export const reactTheme: Theme<
 	typeof colors

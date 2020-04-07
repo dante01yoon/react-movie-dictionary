@@ -2,7 +2,7 @@ import App,{ AppContext, Container } from 'next/app';
 import { isServer } from '../lib/env'; 
 import React, { ReactNode } from 'react';
 import { ReactThemeProvider } from '../theme'; 
-
+import { StoreProvider } from 'store'; 
 interface InitialProps {
   isServer: boolean;
 }
@@ -34,8 +34,10 @@ class MyMobxApp extends App<InitialProps>{
     return(
 			<Container>
 				<ReactThemeProvider>
-					Hello reactMovie  
-					<Component {...pageProps} {...rest}/>  
+					<StoreProvider>
+						Hello reactMovie  
+						<Component {...pageProps} {...rest}/> 
+					</StoreProvider>
 				</ReactThemeProvider>
 			</Container>
     )
