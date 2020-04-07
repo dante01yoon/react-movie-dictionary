@@ -1,20 +1,13 @@
 import React, { FC, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import { StyledButton } from './style'; 
+import { GnbVm } from 'store/Gnb';
 const GnbLogin: FC<{
-	isSignedIn: boolean, 
-	isSignedOut: boolean
-	isSigningIn: boolean,
-	isSigningOut: boolean
+	gnbVm: GnbVm
 }> = observer(({
-	isSigningIn = false,
-	isSigningOut = false,
-	isSignedIn = false, 
-	isSignedOut = false 
+	gnbVm
 }) => {
-	useEffect(() => {
-		
-	},[]);
+	const {isSigningIn, isSigningOut, isSignedIn} = gnbVm; 
 	return(
 		isSigningIn ||  isSigningOut 
 			? 
@@ -24,7 +17,7 @@ const GnbLogin: FC<{
 			:
 				<StyledButton isLoading= {false} >
 					{
-						isSignedIn ? 'signOut' : isSignedOut ? 'signIn / signUp' : 'check the status'
+						isSignedIn ? 'signOut' : 'signIn / signUp' 
 					}
 				</StyledButton>			
 	)

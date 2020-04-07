@@ -28,15 +28,16 @@ class MyMobxApp extends App<InitialProps>{
 
     return { pageProps, isServer }; 
 
-  }
+	}
+	
+	  
   render(): JSX.Element {
     const { Component, pageProps, isServer, ...rest} = this.props;
     return(
 			<Container>
 				<ReactThemeProvider>
 					<StoreProvider>
-						Hello reactMovie  
-						<Component {...pageProps} {...rest}/> 
+							<Component {...pageProps} {...rest}/> 
 					</StoreProvider>
 				</ReactThemeProvider>
 			</Container>
