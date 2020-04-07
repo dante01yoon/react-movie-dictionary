@@ -1,0 +1,3 @@
+export const MMT_TOKEN = 'MMT_TOKEN';
+export const MMT_TOKEN_EXPIRED_TIME = 'MMT_TOKEN_EXPIRED_TIME';
+export const MMT_PERMISSION = 'MMT_PERMISSION';
