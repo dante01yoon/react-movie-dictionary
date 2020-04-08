@@ -8,7 +8,7 @@ export interface GnbVm {
 	user?: string | null; 
 	isSignedIn : boolean | undefined ; 
 	isSigningIn: boolean | undefined; 
-	isDarkMode: boolean;
+	isDarkMode?: boolean;
 	isSigningOut: boolean | undefined;
 }
 class GnbStore extends ApiStore {

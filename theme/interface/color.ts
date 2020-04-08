@@ -14,7 +14,8 @@ export interface Color {
   blue: string;
   bluedark?: string;
   bluedarker?: string;
-  dim: string;
+	dim: string;
+	grayWhite: string; 
   gray100: string;
   gray200: string;
   gray250: string;

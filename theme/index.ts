@@ -10,3 +10,5 @@ export * from './viewport';
 export * from './zIndex'; 
 //theme Provider 
 export {ReactThemeProvider} from './provider';
+//util
+export * from './util';

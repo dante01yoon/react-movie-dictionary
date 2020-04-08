@@ -8,18 +8,18 @@ const LoginView = observer(() => {
 	const { fetchImages, pictureList} = getPictureList; 
 	const gnbVm = useStore('gnb')?.data;
 	return(
-		<DefaultLayout gnbVm={gnbVm}> 
-			{
-				pictureList.length > 0  
-					? 
-					pictureList.map((picture, index) => {
-						return <div key={index}>{picture.author}</div>
-					})
-					:
-					<div>empty</div>
-			}	
-			<button onClick={fetchImages}>fetch Images</button>
-		</DefaultLayout>
+			<DefaultLayout gnbVm={gnbVm}> 
+				{
+					pictureList.length > 0  
+						? 
+						pictureList.map((picture, index) => {
+							return <div key={index}>{picture.author}</div>
+						})
+						:
+						<div>empty</div>
+				}	
+				<button onClick={fetchImages}>fetch Images</button>
+			</DefaultLayout>
 	)
 })
 

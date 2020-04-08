@@ -7,7 +7,7 @@ export enum colors {
   line = '#dedede', // gray250
   disabled = '#cfcfcf', //  gray300
   text = '#a6a6a6', // gray500
-
+	
   black = '#212121',
   black15 = 'rgba(0, 0, 0, 0.15)',
   black30 = 'rgba(0, 0, 0, 0.3)',
@@ -15,7 +15,8 @@ export enum colors {
   bluedark = '#1c70e5',
   bluedarker = '#005acb',
   dim = 'rgba(0, 0, 0, 0.7)',
-  gray100 = '#f5f5f5',
+	grayWhite= '#f0f2f5', 
+	gray100 = '#f5f5f5',
   gray200 = '#e5e5e5',
   gray250 = '#dedede',
   gray300 = '#cfcfcf',

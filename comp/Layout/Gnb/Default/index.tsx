@@ -1,18 +1,16 @@
 import React, { FC, useEffect } from 'react';
 import GnbLogin from '../Login'; 
 import { GnbVm } from 'store/Gnb';
-import { useStore} from 'store';
 const DefaultLayout: FC<{
-	GnbVm : GnbVm
+	gnbVm : GnbVm
 }> = ({
-	GnbVm
+	gnbVm
 }) => {
 	const { 
 		isSignedIn, 
 		isSigningIn,
 		isSigningOut
-		
-	} = GnbVm; 
+	} = gnbVm; 
 	return (
 		<div>
 			{
@@ -20,7 +18,7 @@ const DefaultLayout: FC<{
 				?
 			<div>Hi there?</div>
 			  : 
-			<GnbLogin GnbVm={GnbVm}/>
+			<GnbLogin gnbVm={gnbVm}/>
 			}
 		</div>
 	)
