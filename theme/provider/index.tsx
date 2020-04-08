@@ -19,7 +19,7 @@ export const reactTheme: Theme<
 
 export const globalStyle = css`
 	body {
-		background-color: ${p => p.theme.colors.gray250};
+		background-color: ${p => p.theme.colors.grayWhite};
 		height: 100vh;
 	}
 	a, ul,li {

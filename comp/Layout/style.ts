@@ -5,7 +5,7 @@ export const StyledNav = styled.nav`
 	z-index: ${p => p.theme.zIndex.NAV};
 	width: 100%;
 	height: 64px;
-	background-color: ${ p => p.theme.colors.gray200}; 
+	background-color: ${ p => p.theme.colors.white}; 
 `;
 
 export const Main = styled.main`
