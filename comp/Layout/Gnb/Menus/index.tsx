@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react'; 
-import Link from 'next/link'; 
+import AutoLink from 'comp/AutoLink';
 import { GnbVm } from 'store/Gnb';
 import GnbLogin from 'comp/Layout/Gnb/Login';
 import {
@@ -17,21 +17,24 @@ export const GnbMenus: FC<{
 		<>
 			<StyledMenuList>
 				<StyledMenuItem>			
-					<Link href="/login">
-						<a>	
-							<GnbLogin gnbVm={gnbVm}/>
-						</a>
-					</Link>
+					<AutoLink href="login">
+						<GnbLogin gnbVm={gnbVm}/>
+					</AutoLink>
 				</StyledMenuItem>
 				<StyledMenuItem>
-					<Link href="/movie">
-						<a>Movie</a>
-					</Link>
+					<AutoLink href="search">
+						Search
+					</AutoLink>
 				</StyledMenuItem>
 				<StyledMenuItem>
-					<Link href="/tv">
-						<a>TV</a>
-					</Link>
+					<AutoLink href="movie">
+						Movie
+					</AutoLink>
+				</StyledMenuItem>
+				<StyledMenuItem>
+					<AutoLink href="tv">
+						TV
+					</AutoLink>
 				</StyledMenuItem>
 			</StyledMenuList>
 		</>
