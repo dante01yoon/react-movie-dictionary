@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { ThemeProvider, createGlobalStyle, css } from 'styled-components'; 
 import { Theme } from 'theme/interface/theme';
+import { reset } from 'styled-reset';
 import { 
 	colors,
 	zIndex,
 	viewPort,
-	resetStyle
 } from 'theme';
 export const reactTheme: Theme<
 	typeof colors,
@@ -18,12 +18,16 @@ export const reactTheme: Theme<
 }
 
 export const globalStyle = css`
-  ${resetStyle} // NOTE: Add global style you want under this.
-  body {
+	body {
 		background-color: ${p => p.theme.colors.gray250};
-		margin: 0px; 
-    height: 100vh;
-  }
+		height: 100vh;
+	}
+	a, ul,li {
+		text-decoration: none; 
+		list-style: none; 
+		color: black; 
+	}
+	${reset}
 `;
 const ReactGlobalStyle = createGlobalStyle`
 	${globalStyle}

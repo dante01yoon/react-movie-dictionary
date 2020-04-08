@@ -1,7 +1,8 @@
 import React, { FC, ReactNode } from 'react'; 
 import LogoBlack from 'assets/logo/logo-black-resize.png'; 
 import Head from 'next/head'; 
-import Link from 'next/link'; 
+import AutoLink from 'comp/AutoLink';
+import Footer from 'comp/Layout/Footer';
 import { GnbVm } from 'store/Gnb';
 import GnbLogin from './Gnb/Login';
 import {observer} from 'mobx-react-lite'; 
@@ -10,7 +11,8 @@ import {
 	Main,
 	StyledLogo,
 	StyledRightMenu,
-	StyledLogoBox
+	StyledLogoBox,
+	EmptyMargin
 } from './style'; 
 import { GnbMenus } from './Gnb/Menus'; 
 const DefaultLayout : FC<{
@@ -27,19 +29,19 @@ const DefaultLayout : FC<{
 			</Head>
 			<StyledNav>
 				<StyledLogoBox>
-					<Link href="/">
-						<a>
-							<StyledLogo src={LogoBlack}/>
-						</a>
-					</Link>
+					<AutoLink href="/">
+						<StyledLogo src={LogoBlack}/>
+					</AutoLink>
 				</StyledLogoBox>
 				<StyledRightMenu>
 					<GnbMenus gnbVm={gnbVm}/>
 				</StyledRightMenu>
 			</StyledNav>
+			<EmptyMargin/>
 			<Main>
 					{children}
 			</Main>
+			<Footer/>
 		</> 
 	)
 }); 
