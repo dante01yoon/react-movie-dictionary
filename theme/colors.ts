@@ -32,5 +32,7 @@ export enum colors {
   pink = '#f23d5e',
   red = '#ee0000',
   white = '#ffffff',
-  yellow = '#f8ca4d',
+	yellow = '#f8ca4d',
+	border = '#E0E0E0',
+	footer = '#C6C6C6'
 }

@@ -7,7 +7,7 @@ export interface Color {
   line: string;
   disabled: string;
   text: string;
-	cobalt: string;
+	cobalt: string; 
   black: string;
   black15: string;
   black30: string;
@@ -32,5 +32,7 @@ export interface Color {
   pink: string;
   red: string;
   white: string;
-  yellow: string;
+	yellow: string;
+	border: string;
+	footer: string; 
 }

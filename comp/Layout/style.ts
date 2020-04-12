@@ -9,8 +9,10 @@ export const StyledNav = styled.nav`
 `;
 
 export const Main = styled.main`
+	height: 100vh;
 	position:relative;
 	margin: 0 auto;
+	max-width: 1264px; 
 `;
 
 export const StyledLogo = styled.img`
