@@ -5,7 +5,7 @@ export const StyledFooter = styled.footer`
 	display: flex;
 	height: 188px;
 	padding: 24px;
-	background-color: ${p => p.theme.colors.cobalt}; 
+	background-color: ${p => p.theme.colors.footer}; 
 `;
 
 export const StyledFooterItem = styled.div`

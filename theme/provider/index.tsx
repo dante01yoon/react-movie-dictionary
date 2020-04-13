@@ -19,7 +19,7 @@ export const reactTheme: Theme<
 
 export const globalStyle = css`
 	body {
-		background-color: ${p => p.theme.colors.grayWhite};
+		background-color: ${p => p.theme.colors.white};
 		height: 100vh;
 	}
 	a, ul,li {
@@ -30,6 +30,15 @@ export const globalStyle = css`
 	${reset}
 `;
 const ReactGlobalStyle = createGlobalStyle`
+	html, body {
+		@font-face {font-family: 'LatoLight';
+    src: url('Lato-Light.eot'); /* IE9 Compat Modes */
+    src: url('Lato-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Lato-Light.woff') format('woff'), /* Modern Browsers */
+         url('Lato-Light.ttf') format('truetype');
+    font-style: normal;font-weight: normal;text-rendering: optimizeLegibility;
+	}
+	{ font-family: 'LatoLight', 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
 	${globalStyle}
 `;
 
